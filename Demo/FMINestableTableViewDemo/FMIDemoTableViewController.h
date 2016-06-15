@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  FMIDemoTableViewController.h
 //  FMINestableTableViewDemo
 //
 //  Created by Florian Mielke on 15.06.16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FMIDemoTableViewController : UITableViewController
 
 @end
-

@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		1784471B1D1159DF007C1810 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784471A1D1159DF007C1810 /* main.m */; };
 		1784471E1D1159DF007C1810 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784471D1D1159DF007C1810 /* AppDelegate.m */; };
-		178447211D1159DF007C1810 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 178447201D1159DF007C1810 /* ViewController.m */; };
 		178447241D1159DF007C1810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447221D1159DF007C1810 /* Main.storyboard */; };
 		178447261D1159DF007C1810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178447251D1159DF007C1810 /* Assets.xcassets */; };
 		178447291D1159DF007C1810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447271D1159DF007C1810 /* LaunchScreen.storyboard */; };
 		178447341D1159DF007C1810 /* FMINestableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */; };
 		1784473F1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784473E1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m */; };
 		178447591D115B0E007C1810 /* FMINestableTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; };
+		1784475D1D11691E007C1810 /* FMIDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */; };
+		3591381F857B681F9A81DAB0 /* FMIActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591307CC1905C5E1516BFEE /* FMIActor.m */; };
+		35913AD8700DB80138D4442D /* FMIMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913BFED8009A477EBC7C86 /* FMIMovie.m */; };
+		35913F6453E348E78FBA00BF /* FMIMovies.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591369D6F447E1EEB59E395 /* FMIMovies.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,8 +57,6 @@
 		1784471A1D1159DF007C1810 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1784471C1D1159DF007C1810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1784471D1D1159DF007C1810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1784471F1D1159DF007C1810 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		178447201D1159DF007C1810 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		178447231D1159DF007C1810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		178447251D1159DF007C1810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		178447281D1159DF007C1810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -67,6 +68,14 @@
 		1784473E1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewDemoUITests.m; sourceTree = "<group>"; };
 		178447401D1159DF007C1810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FMINestableTableView.xcodeproj; path = ../FMINestableTableView.xcodeproj; sourceTree = "<group>"; };
+		1784475B1D11691E007C1810 /* FMIDemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDemoTableViewController.h; sourceTree = "<group>"; };
+		1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDemoTableViewController.m; sourceTree = "<group>"; };
+		3591307CC1905C5E1516BFEE /* FMIActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIActor.m; sourceTree = "<group>"; };
+		3591369D6F447E1EEB59E395 /* FMIMovies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMovies.m; sourceTree = "<group>"; };
+		359139DCA0A0219FDD878C16 /* FMIActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIActor.h; sourceTree = "<group>"; };
+		35913B9E057081423A3D7BC7 /* FMIMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMovie.h; sourceTree = "<group>"; };
+		35913BFED8009A477EBC7C86 /* FMIMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMovie.m; sourceTree = "<group>"; };
+		35913C9B84D69EFDD5969A2D /* FMIMovies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMovies.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +128,16 @@
 		178447181D1159DF007C1810 /* FMINestableTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				359139DCA0A0219FDD878C16 /* FMIActor.h */,
+				3591307CC1905C5E1516BFEE /* FMIActor.m */,
+				1784475B1D11691E007C1810 /* FMIDemoTableViewController.h */,
+				1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */,
+				35913B9E057081423A3D7BC7 /* FMIMovie.h */,
+				35913BFED8009A477EBC7C86 /* FMIMovie.m */,
+				35913C9B84D69EFDD5969A2D /* FMIMovies.h */,
+				3591369D6F447E1EEB59E395 /* FMIMovies.m */,
 				1784474C1D115A44007C1810 /* Resources */,
 				178447191D1159DF007C1810 /* Supporting Files */,
-				1784471F1D1159DF007C1810 /* ViewController.h */,
-				178447201D1159DF007C1810 /* ViewController.m */,
 			);
 			path = FMINestableTableViewDemo;
 			sourceTree = "<group>";
@@ -329,9 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178447211D1159DF007C1810 /* ViewController.m in Sources */,
 				1784471E1D1159DF007C1810 /* AppDelegate.m in Sources */,
 				1784471B1D1159DF007C1810 /* main.m in Sources */,
+				1784475D1D11691E007C1810 /* FMIDemoTableViewController.m in Sources */,
+				35913AD8700DB80138D4442D /* FMIMovie.m in Sources */,
+				3591381F857B681F9A81DAB0 /* FMIActor.m in Sources */,
+				35913F6453E348E78FBA00BF /* FMIMovies.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
