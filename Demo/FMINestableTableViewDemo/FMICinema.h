@@ -1,5 +1,5 @@
 //
-//  FMIMovie.h
+//  FMICinema.h
 //  FMINestableTableViewDemo
 //
 //  Created by Florian Mielke on 15.06.16.
@@ -8,25 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@class FMIActor;
+@class FMIMovie;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FMIMovie : NSObject
+@interface FMICinema : NSObject
 
 @property (readonly, copy, NS_NONATOMIC_IOSONLY) NSString *title;
-@property (readonly, NS_NONATOMIC_IOSONLY) NSArray <FMIActor *> *cast;
-@property (readonly, NS_NONATOMIC_IOSONLY) NSUInteger numberOfCast;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSArray <FMIMovie *> *movies;
+@property (readonly, NS_NONATOMIC_IOSONLY) NSUInteger numberOfMovies;
 
 - (instancetype)init NS_UNAVAILABLE;
 
 - (instancetype)initWithTitle:(NSString *)title;
 
-- (void)addActor:(FMIActor *)actor;
+- (void)addMovie:(FMIMovie *)movie;
 
-- (void)removeActorAtIndex:(NSUInteger)index;
-
-- (nullable FMIActor *)castAtIndex:(NSInteger)index;
+- (void)removeMovieAtIndex:(NSUInteger)index;
 
 @end
 

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Movies-->
+        <!--Cinemas-->
         <scene sceneID="Ya9-mC-pim">
             <objects>
                 <tableViewController storyboardIdentifier="FMIDemoTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="clJ-eF-YMY" customClass="FMIDemoTableViewController" sceneMemberID="viewController">
@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FMINestableParentCell" textLabel="p7p-1q-Bcw" style="IBUITableViewCellStyleDefault" id="46u-Ai-aHI">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FMIDemoTableViewControllerParentCell" textLabel="p7p-1q-Bcw" style="IBUITableViewCellStyleDefault" id="46u-Ai-aHI">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="46u-Ai-aHI" id="LxM-bK-qeb">
@@ -31,7 +31,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FMINestableChildCell" textLabel="yfF-ZQ-QAK" style="IBUITableViewCellStyleDefault" id="JHs-zL-joa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FMIDemoTableViewControllerChildCell" textLabel="yfF-ZQ-QAK" style="IBUITableViewCellStyleDefault" id="JHs-zL-joa">
                                 <rect key="frame" x="0.0" y="136" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JHs-zL-joa" id="VmC-MX-JKO">
@@ -54,7 +54,13 @@
                             <outlet property="delegate" destination="clJ-eF-YMY" id="PdI-RU-8r8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Movies" id="WeN-l5-SJg"/>
+                    <navigationItem key="navigationItem" title="Cinemas" id="WeN-l5-SJg">
+                        <barButtonItem key="leftBarButtonItem" title="Hide All" id="4bH-QQ-KrB">
+                            <connections>
+                                <action selector="hideAllNestedRows:" destination="clJ-eF-YMY" id="NR1-w1-SfI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nKY-7o-LE6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

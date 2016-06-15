@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class FMICinemaWorld;
+
 @interface FMIDemoTableViewController : UITableViewController
 
 @end
