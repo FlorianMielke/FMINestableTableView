@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		17409BC61D1155100094A5DB /* FMINestableTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 17409BC51D1155100094A5DB /* FMINestableTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		173C3DD41D1155E5004D291D /* FMINestableTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 173C3DD21D1155E5004D291D /* FMINestableTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		173C3DD51D1155E5004D291D /* FMINestableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 173C3DD31D1155E5004D291D /* FMINestableTableView.m */; };
 		17409BCD1D1155100094A5DB /* FMINestableTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17409BC21D1155100094A5DB /* FMINestableTableView.framework */; };
 		17409BD21D1155100094A5DB /* FMINestableTableViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17409BD11D1155100094A5DB /* FMINestableTableViewTests.m */; };
 /* End PBXBuildFile section */
@@ -23,8 +24,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		173C3DD21D1155E5004D291D /* FMINestableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMINestableTableView.h; sourceTree = "<group>"; };
+		173C3DD31D1155E5004D291D /* FMINestableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableView.m; sourceTree = "<group>"; };
 		17409BC21D1155100094A5DB /* FMINestableTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMINestableTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		17409BC51D1155100094A5DB /* FMINestableTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMINestableTableView.h; sourceTree = "<group>"; };
 		17409BC71D1155100094A5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17409BCC1D1155100094A5DB /* FMINestableTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMINestableTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17409BD11D1155100094A5DB /* FMINestableTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewTests.m; sourceTree = "<group>"; };
@@ -50,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		173C3DD11D1155C2004D291D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17409BC71D1155100094A5DB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		17409BB81D11550F0094A5DB = {
 			isa = PBXGroup;
 			children = (
@@ -71,8 +81,9 @@
 		17409BC41D1155100094A5DB /* FMINestableTableView */ = {
 			isa = PBXGroup;
 			children = (
-				17409BC51D1155100094A5DB /* FMINestableTableView.h */,
-				17409BC71D1155100094A5DB /* Info.plist */,
+				173C3DD21D1155E5004D291D /* FMINestableTableView.h */,
+				173C3DD31D1155E5004D291D /* FMINestableTableView.m */,
+				173C3DD11D1155C2004D291D /* Supporting Files */,
 			);
 			path = FMINestableTableView;
 			sourceTree = "<group>";
@@ -93,7 +104,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17409BC61D1155100094A5DB /* FMINestableTableView.h in Headers */,
+				173C3DD41D1155E5004D291D /* FMINestableTableView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				173C3DD51D1155E5004D291D /* FMINestableTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +388,7 @@
 				17409BD81D1155100094A5DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17409BD91D1155100094A5DB /* Build configuration list for PBXNativeTarget "FMINestableTableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +397,7 @@
 				17409BDB1D1155100094A5DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
