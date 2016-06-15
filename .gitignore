@@ -38,8 +38,7 @@ xcuserdata/
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
+Carthage/Checkouts
 Carthage/Build
 
 # fastlane
@@ -48,7 +47,6 @@ Carthage/Build
 # screenshots whenever they are needed.
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
-
 fastlane/report.xml
 fastlane/screenshots
 
@@ -56,5 +54,8 @@ fastlane/screenshots
 #
 # After new code Injection tools there's a generated folder /iOSInjectionProject
 # https://github.com/johnno1962/injectionforxcode
-
 iOSInjectionProject/
+
+# AppCode
+#
+.idea/
