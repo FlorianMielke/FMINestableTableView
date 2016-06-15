@@ -101,15 +101,10 @@
 		178447181D1159DF007C1810 /* FMINestableTableViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				1784471C1D1159DF007C1810 /* AppDelegate.h */,
-				1784471D1D1159DF007C1810 /* AppDelegate.m */,
+				1784474C1D115A44007C1810 /* Resources */,
+				178447191D1159DF007C1810 /* Supporting Files */,
 				1784471F1D1159DF007C1810 /* ViewController.h */,
 				178447201D1159DF007C1810 /* ViewController.m */,
-				178447221D1159DF007C1810 /* Main.storyboard */,
-				178447251D1159DF007C1810 /* Assets.xcassets */,
-				178447271D1159DF007C1810 /* LaunchScreen.storyboard */,
-				1784472A1D1159DF007C1810 /* Info.plist */,
-				178447191D1159DF007C1810 /* Supporting Files */,
 			);
 			path = FMINestableTableViewDemo;
 			sourceTree = "<group>";
@@ -117,6 +112,9 @@
 		178447191D1159DF007C1810 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1784471C1D1159DF007C1810 /* AppDelegate.h */,
+				1784471D1D1159DF007C1810 /* AppDelegate.m */,
+				1784472A1D1159DF007C1810 /* Info.plist */,
 				1784471A1D1159DF007C1810 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +136,16 @@
 				178447401D1159DF007C1810 /* Info.plist */,
 			);
 			path = FMINestableTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		1784474C1D115A44007C1810 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				178447251D1159DF007C1810 /* Assets.xcassets */,
+				178447271D1159DF007C1810 /* LaunchScreen.storyboard */,
+				178447221D1159DF007C1810 /* Main.storyboard */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +210,7 @@
 		1784470E1D1159DF007C1810 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FMI;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Florian Mielke";
 				TargetAttributes = {
@@ -498,6 +507,7 @@
 				178447451D1159DF007C1810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		178447461D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +516,7 @@
 				178447481D1159DF007C1810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		178447491D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +525,7 @@
 				1784474B1D1159DF007C1810 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
