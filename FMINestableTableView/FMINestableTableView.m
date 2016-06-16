@@ -29,6 +29,10 @@
     return self;
 }
 
+- (NSInteger)fmi_numberOfRows:(NSInteger)numberOfRows inSection:(NSInteger)section {
+    return numberOfRows + [self numberOfVisibleNestedRowsInSection:section];
+}
+
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section {
     if (!self.allowsNestedRows || !self.showsNestedRows || ![self isRootRowSectionEqualToSection:section]) {
         return 0;
@@ -36,11 +40,11 @@
     return [self numberOfNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
 }
 
-- (UITableViewCell *)configuredCellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)fmi_cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         return nil;
     }
-    if ([self isNestedRowAtIndexPath:indexPath]) {
+    if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         return [self.dataSource nestableTableView:self cellForNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     }
@@ -48,11 +52,11 @@
     return [self.dataSource nestableTableView:self cellForRowAtIndexPath:adjustedIndexPath];
 }
 
-- (BOOL)isEditableRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)fmi_canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         return [self.dataSource nestableTableView:self canEditRowAtIndexPath:indexPath];
     }
-    if ([self isNestedRowAtIndexPath:indexPath]) {
+    if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         return [self.dataSource nestableTableView:self canEditNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     }
@@ -60,11 +64,11 @@
     return [self.dataSource nestableTableView:self canEditRowAtIndexPath:adjustedIndexPath];
 }
 
-- (void)passSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)fmi_didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         [self.delegate nestableTableView:self didSelectRowAtIndexPath:indexPath];
     }
-    if ([self isNestedRowAtIndexPath:indexPath]) {
+    if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         [self.delegate nestableTableView:self didSelectNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     } else {
@@ -72,17 +76,17 @@
         if ([self hasNestedRowsForRowAtIndexPath:adjustedIndexPath]) {
             [self toggleNestedRowsForRowAtIndexPath:adjustedIndexPath];
         } else {
-            [self hideNestedRows];
+            [self fmi_hideNestedRows];
             [self.delegate nestableTableView:self didSelectRowAtIndexPath:adjustedIndexPath];
         }
     }
 }
 
-- (void)passCommitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)fmi_commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.allowsNestedRows) {
         [self.dataSource nestableTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
     }
-    if ([self isNestedRowAtIndexPath:indexPath]) {
+    if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
         [self.dataSource nestableTableView:self commitEditingStyle:editingStyle forNestedRowAtIndexPath:indexPath nestedItemIndex:index rootRowIndexPath:self.indexPathForRootRow];
         [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
@@ -92,11 +96,11 @@
     }
 }
 
-- (BOOL)isNestedRowAtIndexPath:(NSIndexPath *)indexPath {
+- (BOOL)fmi_isNestedRowAtIndexPath:(NSIndexPath *)indexPath {
     return [self.indexPathsForNestedRows containsObject:indexPath];
 }
 
-- (void)hideNestedRows {
+- (void)fmi_hideNestedRows {
     if (self.showsNestedRows) {
         [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
     }
@@ -148,7 +152,7 @@
             || ![self isRootRowSectionEqualToSection:indexPath.section]
             || [self isRootRowIndexPathAfterIndexPath:indexPath]
             || [self isRootRowAtIndexPath:indexPath]
-            || [self isNestedRowAtIndexPath:indexPath]) {
+            || [self fmi_isNestedRowAtIndexPath:indexPath]) {
         return indexPath;
     }
     NSInteger row = indexPath.row - [self numberOfVisibleNestedRowsInSection:indexPath.section];
@@ -156,7 +160,7 @@
 }
 
 - (NSInteger)indexForNestedRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (![self isNestedRowAtIndexPath:indexPath]) {
+    if (![self fmi_isNestedRowAtIndexPath:indexPath]) {
         return NSNotFound;
     }
     return indexPath.row - self.indexPathForRootRow.row - 1;

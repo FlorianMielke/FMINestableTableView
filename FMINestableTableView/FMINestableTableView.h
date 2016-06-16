@@ -139,17 +139,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  *
+ * @param numberOfRows
  * @param section
  * @return
  */
-- (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section;
+- (NSInteger)fmi_numberOfRows:(NSInteger)numberOfRows inSection:(NSInteger)section;
 
 /**
  *
  * @param indexPath
  * @return
  */
-- (UITableViewCell *)configuredCellForRowAtIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)fmi_cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *
@@ -163,32 +164,32 @@ NS_ASSUME_NONNULL_BEGIN
  * @param indexPath
  * @return
  */
-- (BOOL)isEditableRowAtIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)fmi_canEditRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *
  * @param indexPath
  * @return
  */
-- (BOOL)isNestedRowAtIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)fmi_isNestedRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *
  * @param indexPath
  */
-- (void)passSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)fmi_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *
  * @param editingStyle
  * @param indexPath
  */
-- (void)passCommitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
+- (void)fmi_commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
- *
+ * Hides all visible nested rows if needed.
  */
-- (void)hideNestedRows;
+- (void)fmi_hideNestedRows;
 
 @end
 
