@@ -49,6 +49,9 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsNestedRows" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="clJ-eF-YMY" id="ykA-9m-2Id"/>
                             <outlet property="delegate" destination="clJ-eF-YMY" id="PdI-RU-8r8"/>

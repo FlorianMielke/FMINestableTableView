@@ -21,6 +21,14 @@
 @dynamic delegate;
 @dynamic dataSource;
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        self.allowsNestedRows = NO;
+    }
+    return self;
+}
+
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section {
     if (!self.allowsNestedRows || !self.showsNestedRows || ![self isRootRowSectionEqualToSection:section]) {
         return 0;

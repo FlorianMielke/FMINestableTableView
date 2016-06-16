@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, nullable) id <FMINestableTableViewDataSource> dataSource;
 @property (nonatomic, weak, nullable) id <FMINestableTableViewDelegate> delegate;
-@property (nonatomic) BOOL allowsNestedRows;
+@property (nonatomic) IBInspectable BOOL allowsNestedRows;
 
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section;
 
