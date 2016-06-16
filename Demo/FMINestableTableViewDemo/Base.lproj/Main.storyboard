@@ -50,7 +50,7 @@
                             </tableViewCell>
                         </prototypes>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="allowsNestedRows" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="fmi_allowsNestedRows" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="clJ-eF-YMY" id="ykA-9m-2Id"/>

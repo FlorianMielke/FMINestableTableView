@@ -12,7 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class FMINestableTableView;
 
-
 /**
  * The FMINestableTableViewDataSource protocol is adopted by an object that mediates the application’s data model for a FMINestableTableView object.
  * The data source provides the table-view object with the information it needs to construct and modify a table view.
@@ -47,10 +46,10 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param tableView The table-view object requesting this information.
  * @param index
- * @param indexPath
+ * @param rootIndexPath
  * @return
  */
-- (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)rootIndexPath;
 
 @optional
 /**
@@ -65,10 +64,10 @@ NS_ASSUME_NONNULL_BEGIN
  *
  * @param tableView
  * @param index
- * @param indexPath
+ * @param rootIndexPath
  * @return
  */
-- (BOOL)nestableTableView:(FMINestableTableView *)tableView canEditNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)nestableTableView:(FMINestableTableView *)tableView canEditNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)rootIndexPath;
 
 /**
  *
@@ -106,9 +105,9 @@ NS_ASSUME_NONNULL_BEGIN
  * Tells the delegate that the specified nested row is now selected.
  * @param tableView The table-view object requesting this information.
  * @param index An index locating the new selected nested row in tableView.
- * @param indexPath An index path that locates a root row in tableView.
+ * @param rootIndexPath An index path that locates a root row in tableView.
  */
-- (void)nestableTableView:(FMINestableTableView *)tableView didSelectNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath;
+- (void)nestableTableView:(FMINestableTableView *)tableView didSelectNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)rootIndexPath;
 
 @end
 
@@ -130,12 +129,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * A Boolean value that determines whether the table view uses nested rows.
  */
-@property (NS_NONATOMIC_IOSONLY) IBInspectable BOOL allowsNestedRows;
+@property (NS_NONATOMIC_IOSONLY) IBInspectable BOOL fmi_allowsNestedRows;
 
 /**
  * A Boolean value that indicates whether the tabe view shows nested rows.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) BOOL showsNestedRows;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fmi_showsNestedRows;
 
 /**
  *
@@ -157,7 +156,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param indexPath
  * @return
  */
-- (NSIndexPath *)adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath;
+- (NSIndexPath *)fmi_adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *

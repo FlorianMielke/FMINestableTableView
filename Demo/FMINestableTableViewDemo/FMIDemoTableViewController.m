@@ -29,7 +29,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.world = [FMIWorldProvider provideWorld];
-    ((FMINestableTableView *) self.tableView).allowsNestedRows = YES;
+    ((FMINestableTableView *) self.tableView).fmi_allowsNestedRows = YES;
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
