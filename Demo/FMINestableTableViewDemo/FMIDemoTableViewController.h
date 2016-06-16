@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class FMICinemaWorld;
-
 OBJC_EXTERN NSString *const FMIDemoTableViewControllerStoryboardID;
 
 NS_ASSUME_NONNULL_BEGIN
