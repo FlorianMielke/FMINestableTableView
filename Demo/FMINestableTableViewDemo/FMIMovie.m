@@ -46,7 +46,7 @@
     [self.actorsContainer removeObjectAtIndex:index];
 }
 
-- (nullable FMIActor *)castAtIndex:(NSInteger)index {
+- (nullable FMIActor *)actorAtIndex:(NSInteger)index {
     if ([self.actorsContainer fmi_validateIndex:index]) {
         return nil;
     }

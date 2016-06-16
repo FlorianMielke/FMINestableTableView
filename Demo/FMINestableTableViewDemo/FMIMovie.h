@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)removeActorAtIndex:(NSUInteger)index;
 
-- (nullable FMIActor *)castAtIndex:(NSInteger)index;
+- (nullable FMIActor *)actorAtIndex:(NSInteger)index;
 
 @end
 
