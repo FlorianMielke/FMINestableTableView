@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */,
-				178447351D1159DF007C1810 /* Info.plist */,
+				17D220451D12C7710082F51A /* Supporting Files */,
 			);
 			path = FMINestableTableViewDemoTests;
 			sourceTree = "<group>";
@@ -205,6 +205,14 @@
 				359130E660756DF390B5EFB3 /* NSArray+FMIValidation.m */,
 			);
 			name = "Sample Data";
+			sourceTree = "<group>";
+		};
+		17D220451D12C7710082F51A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				178447351D1159DF007C1810 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
