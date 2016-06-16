@@ -20,7 +20,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
 
 @interface FMIDemoTableViewController ()
 
-@property (nonatomic, strong) FMICinemaWorld *world;
+@property (NS_NONATOMIC_IOSONLY) FMICinemaWorld *world;
 
 @end
 
@@ -37,6 +37,8 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     [(FMINestableTableView *) self.tableView hideNestedRows];
 }
 
+#pragma mark - Table view data source
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return self.world.numberOfCinemas;
 }
@@ -50,13 +52,39 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     return self.world.cinemas[section].title;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableview cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [(FMINestableTableView *) tableview configuredCellForRowAtIndexPath:indexPath];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return [(FMINestableTableView *) tableView isEditableRowAtIndexPath:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [(FMINestableTableView *) tableView passCommitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+    }
+}
+
+#pragma mark - Table view delegate
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(nonnull UITableViewCell *)cell forRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     cell.backgroundColor = ([(FMINestableTableView *) tableView isNestedRowAtIndexPath:indexPath]) ? [UIColor colorWithWhite:0.941 alpha:1.0] : [UIColor whiteColor];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)nestedTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [(FMINestableTableView *) nestedTableView configuredCellForRowAtIndexPath:indexPath];
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return (CGFloat) (([(FMINestableTableView *) tableView isNestedRowAtIndexPath:indexPath]) ? 44.0 : 66.0);
 }
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return (self.isEditing) ? UITableViewCellEditingStyleDelete : UITableViewCellEditingStyleNone;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [(FMINestableTableView *) tableView passSelectRowAtIndexPath:indexPath];
+}
+
+#pragma mark - Nestable table view data source
 
 - (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FMIDemoTableViewControllerParentCellIdentifier forIndexPath:indexPath];
@@ -67,7 +95,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
 - (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForNestedRowAtIndex:(NSInteger)index rootRowIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FMIDemoTableViewControllerChildCellIdentifier forIndexPath:indexPath];
     FMIMovie *movie = [self.world movieAtIndexPath:indexPath];
-    cell.textLabel.text = [movie castAtIndex:index].name;
+    cell.textLabel.text = [movie actorAtIndex:index].name;
     return cell;
 }
 
@@ -79,27 +107,12 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     return [self.world movieAtIndexPath:indexPath].numberOfCast;
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (self.isEditing) ? UITableViewCellEditingStyleDelete : UITableViewCellEditingStyleNone;
-}
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [(FMINestableTableView *) tableView isEditableRowAtIndexPath:indexPath];
-}
-
 - (BOOL)nestableTableView:(FMINestableTableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    FMIMovie *movie = [self.world movieAtIndexPath:indexPath];
-    return (movie.numberOfCast > 0);
+    return ([self.world movieAtIndexPath:indexPath].numberOfCast > 0);
 }
 
 - (BOOL)nestableTableView:(FMINestableTableView *)tableView canEditNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath {
     return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [(FMINestableTableView *) tableView passCommitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
-    }
 }
 
 - (void)nestableTableView:(FMINestableTableView *)nestedTableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -114,13 +127,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (CGFloat) (([(FMINestableTableView *) tableView isNestedRowAtIndexPath:indexPath]) ? 44.0 : 66.0);
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [(FMINestableTableView *) tableView passSelectRowAtIndexPath:indexPath];
-}
+#pragma mark - Nestable table view delegate
 
 - (void)nestableTableView:(FMINestableTableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Tapped row at index path: %@", indexPath);
