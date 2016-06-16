@@ -14,6 +14,7 @@
 #import "FMICinemaWorld.h"
 #import "FMIWorldProvider.h"
 
+NSString *const FMIDemoTableViewControllerStoryboardID = @"FMIDemoTableViewController";
 NSString *const FMIDemoTableViewControllerParentCellIdentifier = @"FMIDemoTableViewControllerParentCell";
 NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableViewControllerChildCell";
 

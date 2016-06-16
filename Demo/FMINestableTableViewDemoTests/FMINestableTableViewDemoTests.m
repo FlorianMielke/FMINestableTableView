@@ -1,14 +1,9 @@
-//
-//  FMINestableTableViewDemoTests.m
-//  FMINestableTableViewDemoTests
-//
-//  Created by Florian Mielke on 15.06.16.
-//  Copyright © 2016 Florian Mielke. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
+#import "FMIDemoTableViewController.h"
 
 @interface FMINestableTableViewDemoTests : XCTestCase
+
+@property (nonatomic, strong) FMIDemoTableViewController *subject;
 
 @end
 
@@ -16,24 +11,67 @@
 
 - (void)setUp {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle bundleForClass:[self class]]];
+    self.subject = [storyboard instantiateViewControllerWithIdentifier:FMIDemoTableViewControllerStoryboardID];
+    [self.subject viewDidLoad];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+- (void)testItShows3RowsByDefaultInSection1 {
+    XCTAssertEqual(3, [self.subject.tableView numberOfRowsInSection:0]);
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testItShowsChildCellsWhenTappingParentCell {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self expectationForNumberOfRows:5 inSection:0];
+
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:indexPath];
+    [self waitForExpectationsWithTimeout:1.0 handler:nil];
+
+    XCTAssertEqual(5, [self.subject.tableView numberOfRowsInSection:0]);
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+- (void)testItHidesChildCellsWhenTappingParentCellTwice {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    [self expectationForNumberOfRows:3 inSection:0];
+
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:indexPath];
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:indexPath];
+    [self waitForExpectationsWithTimeout:1.0 handler:nil];
+
+    XCTAssertEqual(3, [self.subject.tableView numberOfRowsInSection:0]);
+}
+
+- (void)testItHidesChildCellsWhenTappingAnotherParentCell {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSIndexPath *anotherIndexPath = [NSIndexPath indexPathForRow:3 inSection:0];
+    [self expectationForNumberOfRows:3 inSection:0];
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:indexPath];
+
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:anotherIndexPath];
+    [self waitForExpectationsWithTimeout:1.0 handler:nil];
+
+    XCTAssertEqual(3, [self.subject.tableView numberOfRowsInSection:0]);
+    XCTAssertEqual(2, [self.subject.tableView numberOfRowsInSection:1]);
+}
+
+- (void)testItHidesChildCellsAndOpenOtherChildCells {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+    NSIndexPath *anotherIndexPath = [NSIndexPath indexPathForRow:1 inSection:1];
+    [self expectationForNumberOfRows:3 inSection:0];
+    [self expectationForNumberOfRows:3 inSection:1];
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:indexPath];
+
+    [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:anotherIndexPath];
+    [self waitForExpectationsWithTimeout:1.0 handler:nil];
+
+    XCTAssertEqual(3, [self.subject.tableView numberOfRowsInSection:0]);
+}
+
+- (XCTestExpectation *)expectationForNumberOfRows:(NSUInteger)numberOfRows inSection:(NSInteger)section {
+    NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(UITableView *evaluatedObject, NSDictionary<NSString *, id> *bindings) {
+        return ([evaluatedObject numberOfRowsInSection:section] == numberOfRows);
     }];
+    return [self expectationForPredicate:predicate evaluatedWithObject:self.subject.tableView handler:nil];
 }
 
 @end

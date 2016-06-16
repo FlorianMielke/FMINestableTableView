@@ -10,6 +10,12 @@
 
 @class FMICinemaWorld;
 
+OBJC_EXTERN NSString *const FMIDemoTableViewControllerStoryboardID;
+
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FMIDemoTableViewController : UITableViewController
 
 @end
+
+NS_ASSUME_NONNULL_END

@@ -14,9 +14,11 @@
 		178447291D1159DF007C1810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447271D1159DF007C1810 /* LaunchScreen.storyboard */; };
 		178447341D1159DF007C1810 /* FMINestableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */; };
 		1784473F1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784473E1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m */; };
-		178447591D115B0E007C1810 /* FMINestableTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; };
 		1784475D1D11691E007C1810 /* FMIDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */; };
 		1784476B1D1194BD007C1810 /* FMICinemaWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784476A1D1194BD007C1810 /* FMICinemaWorld.m */; };
+		17AB7BC51D1287DD004EFC47 /* FMINestableTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; };
+		17AB7BC61D1287DD004EFC47 /* FMINestableTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17D220411D12BFA40082F51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447221D1159DF007C1810 /* Main.storyboard */; };
 		359130B5EA3A0E01ACBE1BDC /* FMIWorldProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 359134163448639AD3322179 /* FMIWorldProvider.m */; };
 		3591332A5D8CCA84CB466489 /* NSArray+FMIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 359130E660756DF390B5EFB3 /* NSArray+FMIValidation.m */; };
 		3591360ED787CA7FC1895014 /* FMICinema.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139EACAACF29D78323C93 /* FMICinema.m */; };
@@ -53,7 +55,28 @@
 			remoteGlobalIDString = 17409BCC1D1155100094A5DB;
 			remoteInfo = FMINestableTableViewTests;
 		};
+		17AB7BC71D1287DD004EFC47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 17409BC11D1155100094A5DB;
+			remoteInfo = FMINestableTableView;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17AB7BC91D1287DD004EFC47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17AB7BC61D1287DD004EFC47 /* FMINestableTableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		178447161D1159DF007C1810 /* FMINestableTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMINestableTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +91,7 @@
 		178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewDemoTests.m; sourceTree = "<group>"; };
 		178447351D1159DF007C1810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1784473A1D1159DF007C1810 /* FMINestableTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMINestableTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1784473E1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewDemoUITests.m; sourceTree = "<group>"; };
+		1784473E1D1159DF007C1810 /* FMINestableTableViewDemoUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewDemoUITests.m; sourceTree = "<group>"; };
 		178447401D1159DF007C1810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FMINestableTableView.xcodeproj; path = ../FMINestableTableView.xcodeproj; sourceTree = "<group>"; };
 		1784475B1D11691E007C1810 /* FMIDemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDemoTableViewController.h; sourceTree = "<group>"; };
@@ -92,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178447591D115B0E007C1810 /* FMINestableTableView.framework in Frameworks */,
+				17AB7BC51D1287DD004EFC47 /* FMINestableTableView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,10 +246,12 @@
 				178447121D1159DF007C1810 /* Sources */,
 				178447131D1159DF007C1810 /* Frameworks */,
 				178447141D1159DF007C1810 /* Resources */,
+				17AB7BC91D1287DD004EFC47 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				17AB7BC81D1287DD004EFC47 /* PBXTargetDependency */,
 			);
 			name = FMINestableTableViewDemo;
 			productName = FMINestableTableViewDemo;
@@ -350,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D220411D12BFA40082F51A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +433,11 @@
 			isa = PBXTargetDependency;
 			target = 178447151D1159DF007C1810 /* FMINestableTableViewDemo */;
 			targetProxy = 1784473B1D1159DF007C1810 /* PBXContainerItemProxy */;
+		};
+		17AB7BC81D1287DD004EFC47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMINestableTableView;
+			targetProxy = 17AB7BC71D1287DD004EFC47 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

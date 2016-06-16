@@ -48,7 +48,10 @@
 }
 
 + (FMIMovie *)killBillVol2 {
-    return [[FMIMovie alloc] initWithTitle:@"Kill Bill Vol. 2"];
+    FMIMovie *killBill = [[FMIMovie alloc] initWithTitle:@"Kill Bill Vol. 2"];
+    FMIActor *thurman = [[FMIActor alloc] initWithName:@"Uma Thurman"];
+    [killBill addActor:thurman];
+    return killBill;
 }
 
 + (FMIMovie *)djangoUnchained {
