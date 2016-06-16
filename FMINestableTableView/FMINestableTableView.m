@@ -28,7 +28,7 @@
     return self;
 }
 
-- (NSInteger)fmi_numberOfRows:(NSInteger)numberOfRows inSection:(NSInteger)section {
+- (NSInteger)fmi_adjustedNumberOfRowsForNumberOfRows:(NSInteger)numberOfRows inSection:(NSInteger)section {
     return numberOfRows + [self numberOfVisibleNestedRowsInSection:section];
 }
 
