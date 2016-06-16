@@ -71,10 +71,6 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     cell.backgroundColor = ([(FMINestableTableView *) tableView fmi_isNestedRowAtIndexPath:indexPath]) ? [UIColor colorWithWhite:0.941 alpha:1.0] : [UIColor whiteColor];
 }
 
-//- (UITableViewCellEditingStyle)tableView:(UITableView *)aTableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return (self.isEditing) ? UITableViewCellEditingStyleDelete : UITableViewCellEditingStyleNone;
-//}
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [(FMINestableTableView *) tableView fmi_didSelectRowAtIndexPath:indexPath];
 }
