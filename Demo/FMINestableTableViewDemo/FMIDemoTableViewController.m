@@ -49,8 +49,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     FMICinema *cinema = [self.world cinemaAtIndex:section];
-    NSInteger numberOfRows = [(FMINestableTableView *) tableView fmi_numberOfRows:cinema.numberOfMovies inSection:section];
-    return numberOfRows;
+    return [(FMINestableTableView *) tableView fmi_numberOfRows:cinema.numberOfMovies inSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
