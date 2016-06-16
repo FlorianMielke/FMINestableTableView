@@ -40,7 +40,7 @@
 }
 
 - (void)removeMovieAtIndex:(NSUInteger)index {
-    if ([self.moviesContainer fmi_validateIndex:index]) {
+    if (![self.moviesContainer fmi_validateIndex:index]) {
         return;
     }
     [self.moviesContainer removeObjectAtIndex:index];

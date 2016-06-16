@@ -40,7 +40,7 @@
 }
 
 - (FMIMovie *)movieAtIndexPath:(NSIndexPath *)indexPath {
-    if (![self.cinemaContainer fmi_validateIndex:index]) {
+    if (![self.cinemaContainer fmi_validateIndex:indexPath.section]) {
         return nil;
     }
     FMICinema *cinema = self.cinemaContainer[(NSUInteger) indexPath.section];

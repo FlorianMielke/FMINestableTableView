@@ -11,7 +11,7 @@
 @implementation NSArray (FMIValidation)
 
 - (BOOL)fmi_validateIndex:(NSUInteger)index {
-    return (self.count < index);
+    return (self.count > index);
 }
 
 @end

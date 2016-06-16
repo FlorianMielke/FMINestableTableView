@@ -40,14 +40,14 @@
 }
 
 - (void)removeActorAtIndex:(NSUInteger)index {
-    if ([self.actorsContainer fmi_validateIndex:index]) {
+    if (![self.actorsContainer fmi_validateIndex:index]) {
         return;
     }
     [self.actorsContainer removeObjectAtIndex:index];
 }
 
 - (nullable FMIActor *)actorAtIndex:(NSInteger)index {
-    if ([self.actorsContainer fmi_validateIndex:index]) {
+    if (![self.actorsContainer fmi_validateIndex:index]) {
         return nil;
     }
     return self.actorsContainer[index];
