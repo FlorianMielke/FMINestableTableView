@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1784471B1D1159DF007C1810 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784471A1D1159DF007C1810 /* main.m */; };
+		1784471E1D1159DF007C1810 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784471D1D1159DF007C1810 /* AppDelegate.m */; };
+		178447241D1159DF007C1810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447221D1159DF007C1810 /* Main.storyboard */; };
+		178447261D1159DF007C1810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178447251D1159DF007C1810 /* Assets.xcassets */; };
+		178447291D1159DF007C1810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447271D1159DF007C1810 /* LaunchScreen.storyboard */; };
+		178447341D1159DF007C1810 /* FMINestableTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */; };
+		1784475D1D11691E007C1810 /* FMIDemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */; };
+		1784476B1D1194BD007C1810 /* FMICinemaWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 1784476A1D1194BD007C1810 /* FMICinemaWorld.m */; };
+		17AB7BC51D1287DD004EFC47 /* FMINestableTableView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; };
+		17AB7BC61D1287DD004EFC47 /* FMINestableTableView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 178447561D115AFF007C1810 /* FMINestableTableView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		17D220411D12BFA40082F51A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178447221D1159DF007C1810 /* Main.storyboard */; };
+		359130B5EA3A0E01ACBE1BDC /* FMIWorldProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 359134163448639AD3322179 /* FMIWorldProvider.m */; };
+		3591332A5D8CCA84CB466489 /* NSArray+FMIValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 359130E660756DF390B5EFB3 /* NSArray+FMIValidation.m */; };
+		3591360ED787CA7FC1895014 /* FMICinema.m in Sources */ = {isa = PBXBuildFile; fileRef = 359139EACAACF29D78323C93 /* FMICinema.m */; };
+		3591381F857B681F9A81DAB0 /* FMIActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3591307CC1905C5E1516BFEE /* FMIActor.m */; };
+		35913AD8700DB80138D4442D /* FMIMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = 35913BFED8009A477EBC7C86 /* FMIMovie.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		178447301D1159DF007C1810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1784470E1D1159DF007C1810 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 178447151D1159DF007C1810;
+			remoteInfo = FMINestableTableViewDemo;
+		};
+		178447551D115AFF007C1810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17409BC21D1155100094A5DB;
+			remoteInfo = FMINestableTableView;
+		};
+		178447571D115AFF007C1810 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 17409BCC1D1155100094A5DB;
+			remoteInfo = FMINestableTableViewTests;
+		};
+		17AB7BC71D1287DD004EFC47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 17409BC11D1155100094A5DB;
+			remoteInfo = FMINestableTableView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17AB7BC91D1287DD004EFC47 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17AB7BC61D1287DD004EFC47 /* FMINestableTableView.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		178447161D1159DF007C1810 /* FMINestableTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FMINestableTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784471A1D1159DF007C1810 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1784471C1D1159DF007C1810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1784471D1D1159DF007C1810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		178447231D1159DF007C1810 /* Base */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		178447251D1159DF007C1810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		178447281D1159DF007C1810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1784472A1D1159DF007C1810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1784472F1D1159DF007C1810 /* FMINestableTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMINestableTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewDemoTests.m; sourceTree = "<group>"; };
+		178447351D1159DF007C1810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FMINestableTableView.xcodeproj; path = ../FMINestableTableView.xcodeproj; sourceTree = "<group>"; };
+		1784475B1D11691E007C1810 /* FMIDemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIDemoTableViewController.h; sourceTree = "<group>"; };
+		1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIDemoTableViewController.m; sourceTree = "<group>"; };
+		178447691D1194BD007C1810 /* FMICinemaWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMICinemaWorld.h; sourceTree = "<group>"; };
+		1784476A1D1194BD007C1810 /* FMICinemaWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMICinemaWorld.m; sourceTree = "<group>"; };
+		3591307CC1905C5E1516BFEE /* FMIActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIActor.m; sourceTree = "<group>"; };
+		359130E660756DF390B5EFB3 /* NSArray+FMIValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+FMIValidation.m"; sourceTree = "<group>"; };
+		35913167684DEB2E67B639F2 /* NSArray+FMIValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+FMIValidation.h"; sourceTree = "<group>"; };
+		359134163448639AD3322179 /* FMIWorldProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIWorldProvider.m; sourceTree = "<group>"; };
+		359139DCA0A0219FDD878C16 /* FMIActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIActor.h; sourceTree = "<group>"; };
+		359139EACAACF29D78323C93 /* FMICinema.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMICinema.m; sourceTree = "<group>"; };
+		35913B9E057081423A3D7BC7 /* FMIMovie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIMovie.h; sourceTree = "<group>"; };
+		35913BFED8009A477EBC7C86 /* FMIMovie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIMovie.m; sourceTree = "<group>"; };
+		35913DED242097EBD64416B0 /* FMIWorldProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIWorldProvider.h; sourceTree = "<group>"; };
+		35913E6CCE0E64E21AAA66FB /* FMICinema.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMICinema.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		178447131D1159DF007C1810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17AB7BC51D1287DD004EFC47 /* FMINestableTableView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784472C1D1159DF007C1810 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1784470D1D1159DF007C1810 = {
+			isa = PBXGroup;
+			children = (
+				178447181D1159DF007C1810 /* FMINestableTableViewDemo */,
+				178447321D1159DF007C1810 /* FMINestableTableViewDemoTests */,
+				178447171D1159DF007C1810 /* Products */,
+				178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		178447171D1159DF007C1810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				178447161D1159DF007C1810 /* FMINestableTableViewDemo.app */,
+				1784472F1D1159DF007C1810 /* FMINestableTableViewDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		178447181D1159DF007C1810 /* FMINestableTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1784475B1D11691E007C1810 /* FMIDemoTableViewController.h */,
+				1784475C1D11691E007C1810 /* FMIDemoTableViewController.m */,
+				1784474C1D115A44007C1810 /* Resources */,
+				178447731D119CF3007C1810 /* Sample Data */,
+				178447191D1159DF007C1810 /* Supporting Files */,
+			);
+			path = FMINestableTableViewDemo;
+			sourceTree = "<group>";
+		};
+		178447191D1159DF007C1810 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1784471C1D1159DF007C1810 /* AppDelegate.h */,
+				1784471D1D1159DF007C1810 /* AppDelegate.m */,
+				1784472A1D1159DF007C1810 /* Info.plist */,
+				1784471A1D1159DF007C1810 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		178447321D1159DF007C1810 /* FMINestableTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				178447331D1159DF007C1810 /* FMINestableTableViewDemoTests.m */,
+				17D220451D12C7710082F51A /* Supporting Files */,
+			);
+			path = FMINestableTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		1784474C1D115A44007C1810 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				178447251D1159DF007C1810 /* Assets.xcassets */,
+				178447271D1159DF007C1810 /* LaunchScreen.storyboard */,
+				178447221D1159DF007C1810 /* Main.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		178447511D115AFF007C1810 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				178447561D115AFF007C1810 /* FMINestableTableView.framework */,
+				178447581D115AFF007C1810 /* FMINestableTableViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		178447731D119CF3007C1810 /* Sample Data */ = {
+			isa = PBXGroup;
+			children = (
+				359139DCA0A0219FDD878C16 /* FMIActor.h */,
+				3591307CC1905C5E1516BFEE /* FMIActor.m */,
+				35913E6CCE0E64E21AAA66FB /* FMICinema.h */,
+				359139EACAACF29D78323C93 /* FMICinema.m */,
+				178447691D1194BD007C1810 /* FMICinemaWorld.h */,
+				1784476A1D1194BD007C1810 /* FMICinemaWorld.m */,
+				35913B9E057081423A3D7BC7 /* FMIMovie.h */,
+				35913BFED8009A477EBC7C86 /* FMIMovie.m */,
+				35913DED242097EBD64416B0 /* FMIWorldProvider.h */,
+				359134163448639AD3322179 /* FMIWorldProvider.m */,
+				35913167684DEB2E67B639F2 /* NSArray+FMIValidation.h */,
+				359130E660756DF390B5EFB3 /* NSArray+FMIValidation.m */,
+			);
+			name = "Sample Data";
+			sourceTree = "<group>";
+		};
+		17D220451D12C7710082F51A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				178447351D1159DF007C1810 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		178447151D1159DF007C1810 /* FMINestableTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 178447431D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemo" */;
+			buildPhases = (
+				178447121D1159DF007C1810 /* Sources */,
+				178447131D1159DF007C1810 /* Frameworks */,
+				178447141D1159DF007C1810 /* Resources */,
+				17AB7BC91D1287DD004EFC47 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17AB7BC81D1287DD004EFC47 /* PBXTargetDependency */,
+			);
+			name = FMINestableTableViewDemo;
+			productName = FMINestableTableViewDemo;
+			productReference = 178447161D1159DF007C1810 /* FMINestableTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1784472E1D1159DF007C1810 /* FMINestableTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 178447461D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemoTests" */;
+			buildPhases = (
+				1784472B1D1159DF007C1810 /* Sources */,
+				1784472C1D1159DF007C1810 /* Frameworks */,
+				1784472D1D1159DF007C1810 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				178447311D1159DF007C1810 /* PBXTargetDependency */,
+			);
+			name = FMINestableTableViewDemoTests;
+			productName = FMINestableTableViewDemoTests;
+			productReference = 1784472F1D1159DF007C1810 /* FMINestableTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1784470E1D1159DF007C1810 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FMI;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Florian Mielke";
+				TargetAttributes = {
+					178447151D1159DF007C1810 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					1784472E1D1159DF007C1810 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 178447151D1159DF007C1810;
+					};
+				};
+			};
+			buildConfigurationList = 178447111D1159DF007C1810 /* Build configuration list for PBXProject "FMINestableTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1784470D1D1159DF007C1810;
+			productRefGroup = 178447171D1159DF007C1810 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 178447511D115AFF007C1810 /* Products */;
+					ProjectRef = 178447501D115AFF007C1810 /* FMINestableTableView.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				178447151D1159DF007C1810 /* FMINestableTableViewDemo */,
+				1784472E1D1159DF007C1810 /* FMINestableTableViewDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		178447561D115AFF007C1810 /* FMINestableTableView.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FMINestableTableView.framework;
+			remoteRef = 178447551D115AFF007C1810 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		178447581D115AFF007C1810 /* FMINestableTableViewTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FMINestableTableViewTests.xctest;
+			remoteRef = 178447571D115AFF007C1810 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		178447141D1159DF007C1810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178447291D1159DF007C1810 /* LaunchScreen.storyboard in Resources */,
+				178447261D1159DF007C1810 /* Assets.xcassets in Resources */,
+				178447241D1159DF007C1810 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784472D1D1159DF007C1810 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17D220411D12BFA40082F51A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		178447121D1159DF007C1810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784471E1D1159DF007C1810 /* AppDelegate.m in Sources */,
+				1784476B1D1194BD007C1810 /* FMICinemaWorld.m in Sources */,
+				1784471B1D1159DF007C1810 /* main.m in Sources */,
+				1784475D1D11691E007C1810 /* FMIDemoTableViewController.m in Sources */,
+				35913AD8700DB80138D4442D /* FMIMovie.m in Sources */,
+				3591381F857B681F9A81DAB0 /* FMIActor.m in Sources */,
+				3591360ED787CA7FC1895014 /* FMICinema.m in Sources */,
+				3591332A5D8CCA84CB466489 /* NSArray+FMIValidation.m in Sources */,
+				359130B5EA3A0E01ACBE1BDC /* FMIWorldProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784472B1D1159DF007C1810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				178447341D1159DF007C1810 /* FMINestableTableViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		178447311D1159DF007C1810 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 178447151D1159DF007C1810 /* FMINestableTableViewDemo */;
+			targetProxy = 178447301D1159DF007C1810 /* PBXContainerItemProxy */;
+		};
+		17AB7BC81D1287DD004EFC47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMINestableTableView;
+			targetProxy = 17AB7BC71D1287DD004EFC47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		178447221D1159DF007C1810 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				178447231D1159DF007C1810 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		178447271D1159DF007C1810 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				178447281D1159DF007C1810 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		178447411D1159DF007C1810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		178447421D1159DF007C1810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		178447441D1159DF007C1810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FMINestableTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.systemweit.FMINestableTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		178447451D1159DF007C1810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FMINestableTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.systemweit.FMINestableTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		178447471D1159DF007C1810 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FMINestableTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.systemweit.FMINestableTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMINestableTableViewDemo.app/FMINestableTableViewDemo";
+			};
+			name = Debug;
+		};
+		178447481D1159DF007C1810 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FMINestableTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.systemweit.FMINestableTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FMINestableTableViewDemo.app/FMINestableTableViewDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		178447111D1159DF007C1810 /* Build configuration list for PBXProject "FMINestableTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178447411D1159DF007C1810 /* Debug */,
+				178447421D1159DF007C1810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		178447431D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178447441D1159DF007C1810 /* Debug */,
+				178447451D1159DF007C1810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		178447461D1159DF007C1810 /* Build configuration list for PBXNativeTarget "FMINestableTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				178447471D1159DF007C1810 /* Debug */,
+				178447481D1159DF007C1810 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1784470E1D1159DF007C1810 /* Project object */;
+}
