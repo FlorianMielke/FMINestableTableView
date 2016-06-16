@@ -156,6 +156,19 @@ NS_ASSUME_NONNULL_BEGIN
  * @param indexPath
  * @return
  */
+- (BOOL)fmi_canEditRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ *
+ * @param indexPath
+ */
+- (void)fmi_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
+
+/**
+ * Returns the adjusted index path of a given indexPath and considering any visible nested rows.
+ * @param indexPath
+ * @return
+ */
 - (NSIndexPath *)fmi_adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath;
 
 /**
@@ -163,20 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param indexPath
  * @return
  */
-- (BOOL)fmi_canEditRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- *
- * @param indexPath
- * @return
- */
 - (BOOL)fmi_isNestedRowAtIndexPath:(NSIndexPath *)indexPath;
-
-/**
- *
- * @param indexPath
- */
-- (void)fmi_didSelectRowAtIndexPath:(NSIndexPath *)indexPath;
 
 /**
  *
