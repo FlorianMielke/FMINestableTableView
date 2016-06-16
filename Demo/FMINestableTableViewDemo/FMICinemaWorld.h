@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FMICinemaWorld : NSObject
 
-@property (readonly, NS_NONATOMIC_IOSONLY) NSArray <FMICinema *> *cinemas;
 @property (readonly, NS_NONATOMIC_IOSONLY) NSUInteger numberOfCinemas;
+
+- (nullable FMICinema *)cinemaAtIndex:(NSInteger)index;
 
 - (nullable FMIMovie *)movieAtIndexPath:(NSIndexPath *)indexPath;
 

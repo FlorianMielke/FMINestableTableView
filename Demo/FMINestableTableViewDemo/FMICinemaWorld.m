@@ -10,6 +10,7 @@
 #import "FMIMovie.h"
 #import "FMIActor.h"
 #import "FMICinema.h"
+#import "NSArray+FMIValidation.h"
 
 @interface FMICinemaWorld ()
 
@@ -27,11 +28,21 @@
     return self;
 }
 
-- (NSArray <FMICinema *> *)cinemas {
-    return [self.cinemaContainer copy];
+- (NSUInteger)numberOfCinemas {
+    return self.cinemaContainer.count;
+}
+
+- (FMICinema *)cinemaAtIndex:(NSInteger)index {
+    if (![self.cinemaContainer fmi_validateIndex:index]) {
+        return nil;
+    }
+    return self.cinemaContainer[index];
 }
 
 - (FMIMovie *)movieAtIndexPath:(NSIndexPath *)indexPath {
+    if (![self.cinemaContainer fmi_validateIndex:index]) {
+        return nil;
+    }
     FMICinema *cinema = self.cinemaContainer[(NSUInteger) indexPath.section];
     return cinema.movies[indexPath.row];
 }
@@ -45,8 +56,5 @@
     [cinema removeMovieAtIndex:indexPath.row];
 }
 
-- (NSUInteger)numberOfCinemas {
-    return self.cinemaContainer.count;
-}
 
 @end
