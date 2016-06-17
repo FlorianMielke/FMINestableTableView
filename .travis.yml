@@ -2,3 +2,4 @@ language: objective-c
 osx_image: xcode7.3
 xcode_project: Demo/FMINestableTableViewDemo.xcodeproj
 xcode_scheme: FMINestableTableViewDemo
+script: xctool -sdk iphonesimulator
