@@ -64,7 +64,7 @@
     [self.subject tableView:self.subject.tableView didSelectRowAtIndexPath:anotherIndexPath];
     [self waitForExpectationsWithTimeout:1.0 handler:nil];
 
-    XCTAssertEqual(4, [self.subject.tableView numberOfRowsInSection:0]);
+    XCTAssertEqual(5, [self.subject.tableView numberOfRowsInSection:0]);
 }
 
 - (XCTestExpectation *)expectationForNumberOfRows:(NSUInteger)numberOfRows inSection:(NSInteger)section {
