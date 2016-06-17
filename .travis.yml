@@ -1,5 +1,8 @@
 language: objective-c
 osx_image: xcode7.3
 script:
-  - xctool -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xctool test -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#  - xctool -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+#  - xctool test -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild clean -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemo -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild clean test -project Demo/FMINestableTableViewDemo.xcodeproj -scheme FMINestableTableViewDemoTests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  
