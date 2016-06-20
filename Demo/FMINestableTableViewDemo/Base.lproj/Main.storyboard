@@ -55,8 +55,8 @@
                         <connections>
                             <outlet property="dataSource" destination="clJ-eF-YMY" id="KwR-jh-ApK"/>
                             <outlet property="delegate" destination="clJ-eF-YMY" id="yn7-xE-fYi"/>
-                            <outlet property="nestingDataSource" destination="clJ-eF-YMY" id="jlM-Ol-3x6"/>
-                            <outlet property="nestingDelegate" destination="clJ-eF-YMY" id="aT6-IK-eae"/>
+                            <outlet property="fmi_nestingDataSource" destination="clJ-eF-YMY" id="jlM-Ol-3x6"/>
+                            <outlet property="fmi_nestingDelegate" destination="clJ-eF-YMY" id="aT6-IK-eae"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cinemas" id="WeN-l5-SJg">

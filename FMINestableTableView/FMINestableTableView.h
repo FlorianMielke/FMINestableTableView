@@ -119,12 +119,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The object that acts as the data source of the table view.
  */
-@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDataSourceNesting> nestingDataSource;
+@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDataSourceNesting> fmi_nestingDataSource;
 
 /**
  * The object that acts as the delegate of the table view.
  */
-@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDelegateNesting> nestingDelegate;
+@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDelegateNesting> fmi_nestingDelegate;
 
 /**
  * A Boolean value that determines whether the table view can show nested rows.

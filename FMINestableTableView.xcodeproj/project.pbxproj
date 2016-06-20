@@ -29,7 +29,7 @@
 		17409BC21D1155100094A5DB /* FMINestableTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMINestableTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17409BC71D1155100094A5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17409BCC1D1155100094A5DB /* FMINestableTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FMINestableTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		17409BD11D1155100094A5DB /* FMINestableTableViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewTests.m; sourceTree = "<group>"; };
+		17409BD11D1155100094A5DB /* FMINestableTableViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMINestableTableViewTests.m; sourceTree = "<group>"; };
 		17409BD31D1155100094A5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
