@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @class FMINestableTableView;
 
 /**
- * The FMINestableTableViewDataSource protocol is adopted by an object that mediates the application’s data model for a FMINestableTableView object.
+ * The FMITableViewDataSourceNesting protocol is adopted by an object that mediates the application’s data model for a FMINestableTableView object.
  * The data source provides the table-view object with the information it needs to construct and modify a table view.
  */
-@protocol FMINestableTableViewDataSource <NSObject, UITableViewDataSource>
+@protocol FMITableViewDataSourceNesting <NSObject>
 
 /**
  * Asks the data source to return the number of nested rows for a given index path.
@@ -90,9 +90,9 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 /**
- * The delegate of a \c FMINestableTableView object must adopt the FMINestableTableViewDelegate protocol.
+ * The delegate of a \c FMINestableTableView object must adopt the FMITableViewDelegateNesting protocol.
  */
-@protocol FMINestableTableViewDelegate <NSObject, UITableViewDelegate>
+@protocol FMITableViewDelegateNesting <NSObject>
 
 /**
  * Tells the delegate that the specified row is now selected.
@@ -119,12 +119,12 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * The object that acts as the data source of the table view.
  */
-@property (nullable, weak, NS_NONATOMIC_IOSONLY) id <FMINestableTableViewDataSource> dataSource;
+@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDataSourceNesting> nestingDataSource;
 
 /**
  * The object that acts as the delegate of the table view.
  */
-@property (nullable, weak, NS_NONATOMIC_IOSONLY) id <FMINestableTableViewDelegate> delegate;
+@property (nullable, weak, NS_NONATOMIC_IOSONLY) IBOutlet id <FMITableViewDelegateNesting> nestingDelegate;
 
 /**
  * A Boolean value that determines whether the table view can show nested rows.
@@ -132,9 +132,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (NS_NONATOMIC_IOSONLY) IBInspectable BOOL fmi_allowsNestedRows;
 
 /**
- * A Boolean value that indicates whether the tabe view shows nested rows.
+ * A Boolean value that indicates whether the tabe view currently displays any nested row.
  */
-@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fmi_showsNestedRows;
+@property (readonly, NS_NONATOMIC_IOSONLY) BOOL fmi_displaysNestedRows;
 
 /**
  * Returns the number of rows incl. any visible nested rows in a specified section.

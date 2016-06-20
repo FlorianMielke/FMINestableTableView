@@ -17,9 +17,6 @@
 
 @implementation FMINestableTableView
 
-@dynamic delegate;
-@dynamic dataSource;
-
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -33,7 +30,7 @@
 }
 
 - (NSInteger)numberOfVisibleNestedRowsInSection:(NSInteger)section {
-    if (!self.fmi_allowsNestedRows || !self.fmi_showsNestedRows || ![self isRootRowSectionEqualToSection:section]) {
+    if (!self.fmi_allowsNestedRows || !self.fmi_displaysNestedRows || ![self isRootRowSectionEqualToSection:section]) {
         return 0;
     }
     return [self numberOfNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
@@ -45,53 +42,53 @@
     }
     if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
-        return [self.dataSource nestableTableView:self cellForNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
+        return [self.nestingDataSource nestableTableView:self cellForNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     }
     NSIndexPath *adjustedIndexPath = [self fmi_adjustedIndexPathForIndexPath:indexPath];
-    return [self.dataSource nestableTableView:self cellForRowAtIndexPath:adjustedIndexPath];
+    return [self.nestingDataSource nestableTableView:self cellForRowAtIndexPath:adjustedIndexPath];
 }
 
 - (BOOL)fmi_canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.fmi_allowsNestedRows) {
-        return [self.dataSource nestableTableView:self canEditRowAtIndexPath:indexPath];
+        return [self.nestingDataSource nestableTableView:self canEditRowAtIndexPath:indexPath];
     }
     if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
-        return [self.dataSource nestableTableView:self canEditNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
+        return [self.nestingDataSource nestableTableView:self canEditNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     }
     NSIndexPath *adjustedIndexPath = [self fmi_adjustedIndexPathForIndexPath:indexPath];
-    return [self.dataSource nestableTableView:self canEditRowAtIndexPath:adjustedIndexPath];
+    return [self.nestingDataSource nestableTableView:self canEditRowAtIndexPath:adjustedIndexPath];
 }
 
 - (void)fmi_didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.fmi_allowsNestedRows) {
-        [self.delegate nestableTableView:self didSelectRowAtIndexPath:indexPath];
+        [self.nestingDelegate nestableTableView:self didSelectRowAtIndexPath:indexPath];
     }
     if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
-        [self.delegate nestableTableView:self didSelectNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
+        [self.nestingDelegate nestableTableView:self didSelectNestedRowAtIndex:index rootRowIndexPath:self.indexPathForRootRow];
     } else {
         NSIndexPath *adjustedIndexPath = [self fmi_adjustedIndexPathForIndexPath:indexPath];
         if ([self hasNestedRowsForRowAtIndexPath:adjustedIndexPath]) {
             [self toggleNestedRowsForRowAtIndexPath:adjustedIndexPath];
         } else {
             [self fmi_hideNestedRows];
-            [self.delegate nestableTableView:self didSelectRowAtIndexPath:adjustedIndexPath];
+            [self.nestingDelegate nestableTableView:self didSelectRowAtIndexPath:adjustedIndexPath];
         }
     }
 }
 
 - (void)fmi_commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (!self.fmi_allowsNestedRows) {
-        [self.dataSource nestableTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
+        [self.nestingDataSource nestableTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:indexPath];
     }
     if ([self fmi_isNestedRowAtIndexPath:indexPath]) {
         NSInteger index = [self indexForNestedRowAtIndexPath:indexPath];
-        [self.dataSource nestableTableView:self commitEditingStyle:editingStyle forNestedRowAtIndexPath:indexPath nestedItemIndex:index rootRowIndexPath:self.indexPathForRootRow];
+        [self.nestingDataSource nestableTableView:self commitEditingStyle:editingStyle forNestedRowAtIndexPath:indexPath nestedItemIndex:index rootRowIndexPath:self.indexPathForRootRow];
         [self prepareNestedIndexPathsForIndexPath:self.indexPathForRootRow];
     } else {
         NSIndexPath *adjustedIndexPath = [self fmi_adjustedIndexPathForIndexPath:indexPath];
-        [self.dataSource nestableTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:adjustedIndexPath];
+        [self.nestingDataSource nestableTableView:self commitEditingStyle:editingStyle forRowAtIndexPath:adjustedIndexPath];
     }
 }
 
@@ -100,7 +97,7 @@
 }
 
 - (void)fmi_hideNestedRows {
-    if (self.fmi_showsNestedRows) {
+    if (self.fmi_displaysNestedRows) {
         [self hideNestedRowsForRowAtIndexPath:self.indexPathForRootRow];
     }
 }
@@ -147,7 +144,7 @@
 
 - (NSIndexPath *)fmi_adjustedIndexPathForIndexPath:(NSIndexPath *)indexPath {
     if (!self.fmi_allowsNestedRows
-            || !self.fmi_showsNestedRows
+            || !self.fmi_displaysNestedRows
             || ![self isRootRowSectionEqualToSection:indexPath.section]
             || [self isRootRowIndexPathAfterIndexPath:indexPath]
             || [self isRootRowAtIndexPath:indexPath]
@@ -165,20 +162,20 @@
     return indexPath.row - self.indexPathForRootRow.row - 1;
 }
 
-- (BOOL)fmi_showsNestedRows {
+- (BOOL)fmi_displaysNestedRows {
     return (self.indexPathForRootRow != nil);
 }
 
 - (NSInteger)numberOfNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.dataSource nestableTableView:self numberOfNestedRowsForRowAtIndexPath:indexPath];
+    return [self.nestingDataSource nestableTableView:self numberOfNestedRowsForRowAtIndexPath:indexPath];
 }
 
 - (BOOL)hasNestedRowsForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [self.dataSource nestableTableView:self hasNestedRowsForRowAtIndexPath:indexPath];
+    return [self.nestingDataSource nestableTableView:self hasNestedRowsForRowAtIndexPath:indexPath];
 }
 
 - (UITableViewCell *)cellForRootRow {
-    return self.fmi_showsNestedRows ? [self cellForRowAtIndexPath:self.indexPathForRootRow] : nil;
+    return self.fmi_displaysNestedRows ? [self cellForRowAtIndexPath:self.indexPathForRootRow] : nil;
 }
 
 - (BOOL)isRootRowSectionEqualToSection:(NSInteger)section {

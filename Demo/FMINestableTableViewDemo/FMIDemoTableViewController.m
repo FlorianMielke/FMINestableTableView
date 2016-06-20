@@ -18,7 +18,7 @@ NSString *const FMIDemoTableViewControllerStoryboardID = @"FMIDemoTableViewContr
 NSString *const FMIDemoTableViewControllerParentCellIdentifier = @"FMIDemoTableViewControllerParentCell";
 NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableViewControllerChildCell";
 
-@interface FMIDemoTableViewController ()
+@interface FMIDemoTableViewController () <FMITableViewDataSourceNesting, FMITableViewDelegateNesting>
 
 @property (NS_NONATOMIC_IOSONLY) FMICinemaWorld *world;
 
@@ -90,7 +90,7 @@ NSString *const FMIDemoTableViewControllerChildCellIdentifier = @"FMIDemoTableVi
     return cell;
 }
 
-- (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForNestedRowAtIndex:(NSInteger)index rootRowIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)nestableTableView:(FMINestableTableView *)tableView cellForNestedRowAtIndex:(NSUInteger)index rootRowIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:FMIDemoTableViewControllerChildCellIdentifier forIndexPath:indexPath];
     FMIMovie *movie = [self.world movieAtIndexPath:indexPath];
     cell.textLabel.text = [movie actorAtIndex:index].name;

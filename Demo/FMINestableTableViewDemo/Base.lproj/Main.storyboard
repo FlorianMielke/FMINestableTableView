@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Cinemas-->
+        <!--Nesting Data Source-->
         <scene sceneID="Ya9-mC-pim">
             <objects>
                 <tableViewController storyboardIdentifier="FMIDemoTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="clJ-eF-YMY" customClass="FMIDemoTableViewController" sceneMemberID="viewController">
@@ -25,7 +25,7 @@
                                             <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -53,8 +53,10 @@
                             <userDefinedRuntimeAttribute type="boolean" keyPath="fmi_allowsNestedRows" value="YES"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <outlet property="dataSource" destination="clJ-eF-YMY" id="ykA-9m-2Id"/>
-                            <outlet property="delegate" destination="clJ-eF-YMY" id="PdI-RU-8r8"/>
+                            <outlet property="dataSource" destination="clJ-eF-YMY" id="KwR-jh-ApK"/>
+                            <outlet property="delegate" destination="clJ-eF-YMY" id="yn7-xE-fYi"/>
+                            <outlet property="nestingDataSource" destination="clJ-eF-YMY" id="jlM-Ol-3x6"/>
+                            <outlet property="nestingDelegate" destination="clJ-eF-YMY" id="aT6-IK-eae"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Cinemas" id="WeN-l5-SJg">
